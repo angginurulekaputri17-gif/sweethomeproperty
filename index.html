@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Sweet Home | Real Estate</title>
+    <meta
+      name="description"
+      content="Discover beautiful homes for sale and rent with Sweet Home Property Partnership."
+    />
+    <meta name="theme-color" content="#263746" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container navbar">
+        <a href="#home" class="logo">
+          <img
+            src="Sweet Home Property Partnership.png"
+            alt="Sweet Home logo"
+          />
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          ☰
+        </button>
+
+        <nav>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#properties">Properties</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a href="#contact" class="btn btn-primary nav-cta"> Get in Touch </a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+
+        <div class="container hero-content">
+          <span class="hero-label">YOUR TRUSTED PROPERTY PARTNER</span>
+
+          <h1>
+            Find a Place<br />
+            to Call <span>Home.</span>
+          </h1>
+
+          <p>
+            Discover exceptional properties and find the perfect home for your
+            lifestyle with Sweet Home.
+          </p>
+
+          <a href="#properties" class="btn btn-primary">
+            Explore Properties <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- PROPERTY SEARCH -->
+      <section class="search-section">
+        <div class="container">
+          <form class="search-panel" id="search-form">
+            <div class="search-field">
+              <label for="property-type">Property Type</label>
+              <select id="property-type">
+                <option value="all">All Properties</option>
+                <option value="house">House</option>
+                <option value="apartment">Apartment</option>
+                <option value="villa">Villa</option>
+              </select>
+            </div>
+
+            <div class="search-field">
+              <label for="property-location">Location</label>
+              <input
+                id="property-location"
+                type="search"
+                placeholder="City or area"
+              />
+            </div>
+
+            <div class="search-field">
+              <label for="property-purpose">Purpose</label>
+              <select id="property-purpose">
+                <option value="all">Buy or Rent</option>
+                <option value="buy">Buy</option>
+                <option value="rent">Rent</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary search-btn">
+              Search
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <!-- PROPERTIES -->
+      <section class="section properties-section" id="properties">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="eyebrow">OUR PROPERTY COLLECTION</span>
+              <h2>Featured <span>Properties</span></h2>
+              <p>Explore selected homes and spaces for your next chapter.</p>
+            </div>
+
+            <div class="property-filters" aria-label="Filter properties">
+              <button class="filter-btn active" data-filter="all">All</button>
+              <button class="filter-btn" data-filter="buy">For Sale</button>
+              <button class="filter-btn" data-filter="rent">For Rent</button>
+            </div>
+          </div>
+
+          <p
+            class="results-message"
+            id="results-message"
+            aria-live="polite"
+          ></p>
+
+          <div class="property-grid" id="property-grid">
+            <!-- PROPERTY 1 -->
+            <article
+              class="property-card"
+              data-purpose="buy"
+              data-type="house"
+              data-location="jakarta"
+            >
+              <div class="property-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600591322744-6c4f9a6b7f3d?auto=format&fit=crop&w=900&q=80"
+                  alt="Contemporary residential house"
+                  loading="lazy"
+                />
+                <span class="property-badge">For Sale</span>
+              </div>
+
+              <div class="property-info">
+                <p class="property-location">Jakarta, Indonesia</p>
+                <h3>Modern Family House</h3>
+                <p class="property-price">$135.501,41</p>
+
+                <div class="property-details">
+                  <span>3 Beds</span>
+                  <span>2 Baths</span>
+                  <span>180 m²</span>
+                </div>
+
+                <a href="#contact" class="property-link">
+                  Inquire About Property →
+                </a>
+              </div>
+            </article>
+
+            <!-- PROPERTY 2 -->
+            <article
+              class="property-card"
+              data-purpose="rent"
+              data-type="apartment"
+              data-location="bandung"
+            >
+              <div class="property-image">
+                <img
+                  src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+                  alt="Stylish apartment interior"
+                  loading="lazy"
+                />
+                <span class="property-badge rent-badge">For Rent</span>
+              </div>
+
+              <div class="property-info">
+                <p class="property-location">Bandung, Indonesia</p>
+                <h3>Elegant City Apartment</h3>
+                <p class="property-price">$ 3.594,94 / year</p>
+
+                <div class="property-details">
+                  <span>2 Beds</span>
+                  <span>1 Bath</span>
+                  <span>85 m²</span>
+                </div>
+
+                <a href="#contact" class="property-link">
+                  Inquire About Property →
+                </a>
+              </div>
+            </article>
+
+            <!-- PROPERTY 3 -->
+            <article
+              class="property-card"
+              data-purpose="buy"
+              data-type="villa"
+              data-location="bali"
+            >
+              <div class="property-image">
+                <img
+                  src="https://images.unsplash.com/photo-1613490493576-7 berdc?auto=format&fit=crop&w=900&q=80"
+                  alt="Luxury villa with outdoor living space"
+                  loading="lazy"
+                />
+                <span class="property-badge">For Sale</span>
+              </div>
+
+              <div class="property-info">
+                <p class="property-location">Bali, Indonesia</p>
+                <h3>Private Tropical Villa</h3>
+                <p class="property-price">$265.472,16</p>
+
+                <div class="property-details">
+                  <span>4 Beds</span>
+                  <span>3 Baths</span>
+                  <span>260 m²</span>
+                </div>
+
+                <a href="#contact" class="property-link">
+                  Inquire About Property →
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section services-section" id="services">
+        <div class="container">
+          <div class="section-heading centered">
+            <span class="eyebrow">WHAT WE DO</span>
+            <h2>Property Services <span>You Can Trust</span></h2>
+            <p>We make every step of your property journey easier.</p>
+          </div>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">⌂</div>
+              <h3>Buy a Property</h3>
+              <p>
+                Find a home that matches your needs, preferences, and budget.
+              </p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">⌕</div>
+              <h3>Rent a Property</h3>
+              <p>Discover comfortable rental homes in locations you love.</p>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">↗</div>
+              <h3>Sell Your Property</h3>
+              <p>Connect with prospective buyers and market your property.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section about-section" id="about">
+        <div class="container about-grid">
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
+              alt="Warm and welcoming home interior"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="about-content">
+            <span class="eyebrow">ABOUT SWEET HOME</span>
+
+            <h2>
+              Helping You Find<br />
+              Your <span>Sweet Home.</span>
+            </h2>
+
+            <p>
+              Sweet Home Property Partnership helps people discover properties
+              that suit their lifestyle. We believe finding a home should feel
+              exciting, clear, and personal.
+            </p>
+
+            <a href="#contact" class="btn btn-primary"> Connect With Us → </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div>
+            <span class="eyebrow">GET IN TOUCH</span>
+            <h2>Let's Find Your <span>Dream Home.</span></h2>
+            <p>
+              Have a question about a property? Send us a message and our team
+              can help you with the next step.
+            </p>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            />
+
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="Tell us what property you are looking for"
+              required
+            ></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+
+            <p id="contact-status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© <span id="year"></span> Sweet Home Property Partnership.</p>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+  </body>
+</html>
